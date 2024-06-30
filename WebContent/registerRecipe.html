@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>레시피 등록</title>
+</head>
+<body>
+    <h1>레시피 등록</h1>
+    <form action="registerRecipe" method="post" enctype="multipart/form-data">
+        제목: <input type="text" name="name"><br>
+        사진: <input type="file" name="image"><br>
+        식재료: <input type="text" name="ingredients"><br>
+        방법: <textarea name="method"></textarea><br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>

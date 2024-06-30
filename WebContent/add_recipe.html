@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="user-menu-container">
+            <div class="menu">
+                <a href="" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <img src="images/ico-user.png" alt="" class="small-img">
+                    </div>
+                </a>
+                <a href="add_recipe.html" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <b>레시피 등록</b>
+                    </div>
+                </a>
+                <a href="search_recipe.html" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <img src="images/ico-search.png" alt="" class="small-img">
+                    </div>
+                </a>
+                <a href="" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <b>고객문의</b>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="recipe-menu-container">
+            <div class="recipe-menu">
+                <a href="index.html" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <i><b>Prefer</b></i>
+                    </div>
+                </a>
+                <a href="index.html" class="text-decoration-none ">
+                    <div class="text-decoration-none hover-button padding">
+                        <i><b>Health Care</b></i>
+                    </div>
+                </a>
+                <a href="index.html" class="text-decoration-none ">
+                    <div class="text-decoration-none hover-button padding">
+                        <i><b>New</b></i>
+                    </div>
+                </a>
+                <a href="index.html" class="text-decoration-none">
+                    <div class="text-decoration-none hover-button padding">
+                        <i><b>Best</b></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="addRecipeHeader">
+            <h2 class="paddingLeft1">레시피 등록</h2>
+        </div>
+        <div class="addRecipeSection">
+            <form action="registerRecipe" method="post" enctype="multipart/form-data">
+                <div class="addSection">
+                    <div class="section1">
+                        <h3 class="paddingLeft1">레시피 이름</h3>
+                        <input type="text" name="name" class="marginLeft1 textBox" placeholder="레시피 이름"><br>
+                    </div>
+                    <div class="section1">
+                        <h3 class="paddingLeft1">식재료 입력</h3>
+                        <input type="text" name="ingredients" class="marginLeft1 textBox" placeholder="식재료 입력"><br>
+                    </div>
+                    <div class="section1">
+                        <h3 class="paddingLeft1">조리 방법</h3>
+                        <textarea name="method" class="marginLeft1 textBox" placeholder="조리 방법"></textarea><br>
+                    </div>
+                </div>
+                <div class="uploadButton">
+                    <img src="images/pic_none4.gif" id="uploadBtn" class="paddingLeft1" style="cursor: pointer;">
+                    <input type="file" id="fileInput" name="image" style="display: none;">
+                    <button class="addButton marginLeft1" type="submit"><h2 style="margin-block-start: 0.83em; margin-block-end: 0.83em;">저장</h2></button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('uploadBtn').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+    </script>
+</body>
+
+</html>
